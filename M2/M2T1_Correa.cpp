@@ -1,5 +1,5 @@
 // CSC 134
-// M2LAB1 Product Sales
+// M2T1_Product Sales
 // Correa-Torres
 // 09/09/26
 // Program made with Input
