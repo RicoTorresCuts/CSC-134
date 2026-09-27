@@ -28,7 +28,7 @@ int main() {
     question1();
     question2();
     question3();
-    //question4();
+    question4();
 }
 
 void question1() {
@@ -139,4 +139,19 @@ void question3() {
     cout << "\nPizza party results" << endl;
     cout << "Total slices: " << totalSlices << endl;
     cout << "Slices left over: " << slicesLeft << endl;
+}
+
+void question4() {
+    cout << "\n========== Question 4 ==========\n";
+
+    string letsGo = "Let's go ";
+    string school = "FTCC";
+    string team = "Trojans";
+    string cheerOne = letsGo + school;
+    string cheerTwo = letsGo + team;
+
+    cout << cheerOne << endl;
+    cout << cheerOne << endl;
+    cout << cheerOne << endl;
+    cout << cheerTwo << endl;
 }
