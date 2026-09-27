@@ -27,7 +27,7 @@ int main() {
     // Run only the questions you finish by removing the //
     question1();
     question2();
-    //question3();
+    question3();
     //question4();
 }
 
@@ -112,4 +112,31 @@ void question2() {
     cout << "Sells for:     $" << crate_charge << endl;
     cout << "Profit:        $" << profit << endl;
     
+}
+
+void question3() {
+    cout << "\n========== Question 3 ==========\n";
+
+    int pizzas;
+    int slicesPerPizza;
+    int visitors;
+    int totalSlices;
+    int slicesLeft;
+
+    cout << "How many pizzas did you order? ";
+    cin >> pizzas;
+
+    cout << "How many slices are in each pizza? ";
+    cin >> slicesPerPizza;
+
+    cout << "How many visitors are coming? ";
+    cin >> visitors;
+
+    totalSlices = pizzas * slicesPerPizza;
+
+    slicesLeft = totalSlices - (visitors * 3);
+
+    cout << "\nPizza party results" << endl;
+    cout << "Total slices: " << totalSlices << endl;
+    cout << "Slices left over: " << slicesLeft << endl;
 }
