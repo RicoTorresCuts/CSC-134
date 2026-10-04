@@ -25,6 +25,22 @@ int main() {
 
 void question1() {
     cout << "\n========== Question 1 ==========\n";
+    cout << "Hello, I'm your NEW Best Friend!" << endl;
+    cout << "Do you want to be my friend? Please type yes or no." << endl;
+
+    string answer;
+    cin >> answer;
+
+    if (answer == "yes") {
+        cout << "That's great! I'm sure we'll get along." << endl;
+    }
+    else if (answer == "no") {
+        cout << "Well, maybe you'll learn to like me later." << endl;
+    }
+    else {
+        cout << "If you're not sure... that's OK. I promise we'll be Best Buddies" << endl;
+    }
+}
 
 
     
