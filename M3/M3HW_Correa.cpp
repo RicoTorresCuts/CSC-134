@@ -61,7 +61,7 @@ int main() {
 
 void question1() {
     cout << "\n========== Question 1 ==========\n";
-    cout << "Hello, I'm your NEW Best Friend!" << endl;
+    cout << "Hello, I'm Chucky, your NEW Best Friend!" << endl;
     cout << "Do you want to be my friend? Please type yes or no." << endl;
 
     string answer;
