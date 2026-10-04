@@ -8,6 +8,8 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <cstdlib> // for rand() and srand()
+#include <ctime>   // for time()
 using namespace std;
 
 void question1();
@@ -16,11 +18,45 @@ void question3();
 void question4();
 
 int main() {
-    // Run only the questions you finish by removing the //
-    question1();
-    question2();
-    question3();
-    // question4();
+    int choice;
+    bool keep_going = true;
+
+    // Seed the random number generator once before using rand().
+    srand(time(0));
+
+    while (true == keep_going) {
+        cout << "\nCSC 134 - M3HW Gold" << endl;
+        cout << "1. Chat bot" << endl;
+        cout << "2. Receipt calculator" << endl;
+        cout << "3. Choose Your Own Adventure" << endl;
+        cout << "4. Math practice" << endl;
+        cout << "0. Exit" << endl;
+        cout << "Choose a question: ";
+
+        cin >> choice;
+
+        if (1 == choice) {
+            question1();
+        }
+        else if (2 == choice) {
+            question2();
+        }
+        else if (3 == choice) {
+            question3();
+        }
+        else if (4 == choice) {
+            question4();
+        }
+        else if (0 == choice) {
+            cout << "Bye!" << endl;
+            keep_going = false;
+        }
+        else {
+            cout << "Not a valid choice." << endl;
+        }
+    }
+
+    return 0;
 }
 
 void question1() {
@@ -121,5 +157,24 @@ void question3() {
     }
     else {
         cout << "That is not a valid choice." << endl;
+    }
+}
+
+void question4() {
+    cout << "\n========== Question 4 ==========" << endl;
+
+    int number1 = (rand() % 10);
+    int number2 = (rand() % 10);
+    int correct_answer = number1 + number2;
+    int user_answer;
+
+    cout << "What is " << number1 << " plus " << number2 << "?" << endl;
+    cin >> user_answer;
+
+    if (user_answer == correct_answer) {
+        cout << "Correct!" << endl;
+    }
+    else {
+        cout << "Incorrect." << endl;
     }
 }
