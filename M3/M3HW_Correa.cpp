@@ -19,7 +19,7 @@ int main() {
     // Run only the questions you finish by removing the //
     question1();
     question2();
-    // question3();
+    question3();
     // question4();
 }
 
@@ -87,3 +87,39 @@ void question2() {
     cout << setw(30) << "Thank You Come Again!" << endl;
 }
     
+void question3() {
+    cout << "\n========== Question 3 ==========\n";
+    cout << "You are exploring an old castle and find two paths." << endl;
+    cout << "1. Enter the dark tunnel" << endl;
+    cout << "2. Cross the rope bridge" << endl;
+    cout << "Choose 1 or 2: ";
+
+    int first_choice;
+    cin >> first_choice;
+
+    if (first_choice == 1) {
+        cout << "The tunnel collapses behind you. Game over!" << endl;
+    }
+    else if (first_choice == 2) {
+        cout << "You cross the bridge and find a locked treasure room." << endl;
+        cout << "1. Force the door open" << endl;
+        cout << "2. Use the key you found on the bridge" << endl;
+        cout << "Choose 1 or 2: ";
+
+        int second_choice;
+        cin >> second_choice;
+
+        if (second_choice == 1) {
+            cout << "The door was trapped. You are defeated!" << endl;
+        }
+        else if (second_choice == 2) {
+            cout << "The key opens the room. You find the treasure. Victory!" << endl;
+        }
+        else {
+            cout << "That is not a valid choice." << endl;
+        }
+    }
+    else {
+        cout << "That is not a valid choice." << endl;
+    }
+}
