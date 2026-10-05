@@ -22,7 +22,7 @@ int main() {
     cout << "______________________" << endl;
     int i = MIN_NUM;
     while (i <= MAX_NUM) {
-        cout << i << "\t" i*i << endl;
+        cout << i << "\t" << i*i << endl;
         i++;
     }
 
