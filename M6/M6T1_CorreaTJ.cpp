@@ -10,21 +10,76 @@ using namespace std;
 // Function Declarations
 void method1();
 void method2();
+void method3();
 
 // main
 int main() {
     // Count # of Pokemon per day, two different ways
     method1();
     method2();
+    method3();
 
     return 0;
 }
 
 void method1() {
-    cout << "TODO" << endl;
+    // Method 1: with arrays
+    string item = "pokemon";
+    cout << "Count how many " << item << " were seen each day." << endl;
+    // Count for five days
+    const int SIZE = 5;
+    int counts [SIZE];
+    int total = 0;
+    double average = 0;
+    // Get the input, add the total
+    for (int i=0; i < SIZE; i++) {
+        cout << "Day " << i+1 << ": ";   // Print days 1-5, not 0-4
+        cin >> counts[i];
+        total += counts[i];
+    }
+    cout << "Total " << item << " see: " << total << endl;
+    average = (double) total / SIZE;
+    cout << "Average per day: " << average << endl;
+    cout << item << " caught per day:" << endl;
+    for (int i=0; i < SIZE; i++) {
+        cout << "Day " << i+1 << "; " << counts[i] <<endl;
+    }
 
 }
 
 void method2() { 
-    cout << "TODO" << endl;
+    // Same total and average, no array.
+    string item = "pokemon";
+    cout << "Count how many " << item << " were seen each day. " << endl;
+    // Count for 5 days
+    const int SIZE = 5;
+    int total = 0;
+    int today;
+    double average = 0;
+    // Get the input, add to total
+    for (int i=0; i < SIZE; i++) {
+
+    }
+  
+}
+
+void method3() {
+    // Range-based for loop
+    // Cannot buffer overflow, because we don't handle the index ourselves
+    const int SIZE = 5;
+    int counts [5] = {0, 0, 0, 0, 0,};
+    cout << "Count pokemon per day" << endl;
+    for (int& count: counts) {
+        cout << "> ";
+        cin >> count;
+    }
+    // Now do total and average
+    int total = 0;
+    double average = 0;
+    // NOTE: this loops onl reads values, so doesn't need the &
+    for (int count: counts) {
+        total += count;
+    }
+    average = (double) total / SIZE;
+    cout << "Total: " << total << endl << "Average: " << average << endl;
 }
